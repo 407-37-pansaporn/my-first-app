@@ -9,9 +9,9 @@ if "ans1_val" not in st.session_state:
 if "ans2_val" not in st.session_state:
     st.session_state.ans2_val = ""
 if "ans3_val" not in st.session_state:
-    st.session_state.ans1_val = ""
+    st.session_state.ans3_val = ""
 if "ans4_val" not in st.session_state:
-    st.session_state.ans2_val = ""
+    st.session_state.ans4_val = ""
 
 
 # 📌 ฟังก์ชันเคลียร์ค่าเมื่อกดปุ่มเริ่มใหม่
@@ -99,22 +99,19 @@ ans2 = st.text_input(
     "ข้อ 2: Cats love to eat `f _ s h`. 🐟",
     value=st.session_state.ans2_val,
 )
-
-# อัปเดตค่าล่าสุดเข้าตัวแปร
-st.session_state.ans1_val = ans1
-st.session_state.ans2_val = ans2
-st.session_state.ans3_val = ans3
-st.session_state.ans4_val = ans4
-
 ans3 = st.text_input(
-    "ข้อ 3:  `m _ _ y ` a day keeps the doctor away.💵",
+    "ข้อ 3:  Everyone need `m _ _ y ` a day keeps the doctor away.💵",
     value=st.session_state.ans3_val,
 )
 ans4 = st.text_input(
     "ข้อ 4: The `s _ ar`. ⭐ ",
     value=st.session_state.ans4_val,
 )
-
+# อัปเดตค่าล่าสุดเข้าตัวแปร
+st.session_state.ans1_val = ans1
+st.session_state.ans2_val = ans2
+st.session_state.ans3_val = ans3
+st.session_state.ans4_val = ans4
 
 # 4. ปุ่มส่งคำตอบ
 if "start" in st.session_state and not st.session_state.get("is_ended", False):
